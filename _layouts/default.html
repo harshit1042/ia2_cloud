@@ -30,14 +30,14 @@
         <h1>Step 1: Create Network</h1>
         <p><b>List available networks : </b>docker network ls <br><b>Create a Docker network : </b>docker network create
             my-network</p>
-        <img src="https://github.com/harshit1042/ia2_cloud/blob/main/images/1.png" alt="">
+        <img src="https://github.io/harshit1042/ia2_cloud/blob/main/images/1.png" alt="">
 
 
         <h1>Step 2: Connecting MongoDB Container to Network</h1>
         <p><b>Pull Docker image for MongoDB from Docker Hub</b></p>
         <p><b>Run MongoDB container :</b> docker run -d -p 27017:27017 --network my-network --name my-mongo -e
             MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=pass mongo</p>
-        <img src="https://github.com/harshit1042/ia2_cloud/blob/main/images/2.png" alt="">
+        <img src="https://github.io/harshit1042/ia2_cloud/blob/main/images/2.png" alt="">
 
         <h1 id="section2">BACKEND TIER</h1>
         <h1>Step 3: Create mongo-express image for Backend</h1>
@@ -46,55 +46,55 @@
         <p><b>Run mongo-express container : </b>docker run -d -p 8081:8081 --network my-network --name my-mongo-express
             -e ME_CONFIG_OPTIONS_EDITORTHEME="ambiance" -e ME_CONFIG_OPTIONS_SERVER="my-mongo" -e
             ME_CONFIG_OPTIONS_ADMINUSERNAME="admin" -e ME_CONFIG_OPTIONS_PASSWORD="pass" mongo-express</p>
-        <img src="https://github.com/harshit1042/ia2_cloud/blob/main/images/3.png" alt="">
+        <img src="https://github.io/harshit1042/ia2_cloud/blob/main/images/3.png" alt="">
 
         <h2>Step 3: Configure Database</h2>
         <p>Enter into URL <b>localhost:8081</b> and sign in using the credentials input</p>
-        <img src="https://github.com/harshit1042/ia2_cloud/blob/main/images/4.png" alt=""><br><br>
+        <img src="https://github.io/harshit1042/ia2_cloud/blob/main/images/4.png" alt=""><br><br>
 
         <h2>After entering the correct credentials, you will see the existing databases</h2>
-        <img src="https://github.com/harshit1042/ia2_cloud/blob/main/images/5.png" alt=""><br><br>
+        <img src="https://github.io/harshit1042/ia2_cloud/blob/main/images/5.png" alt=""><br><br>
 
         <h2>Create two databases, namely user-accounts and my-db</h2>
-        <img src="https://github.com/harshit1042/ia2_cloud/blob/main/images/6.png" alt=""><br>
-        <img src="https://github.com/harshit1042/ia2_cloud/blob/main/images/7.png" alt=""><br>
+        <img src="https://github.io/harshit1042/ia2_cloud/blob/main/images/6.png" alt=""><br>
+        <img src="https://github.io/harshit1042/ia2_cloud/blob/main/images/7.png" alt=""><br>
 
         <h2>In the user accounts database, create a collection named user</h2>
-        <img src="https://github.com/harshit1042/ia2_cloud/blob/main/images/8.png" alt=""><br>
+        <img src="https://github.io/harshit1042/ia2_cloud/blob/main/images/8.png" alt=""><br>
 
         <h1 id="section3">FRONTEND TIER</h1>
         <h2>The website i have used for this project is referred from <a
-                href="https://gitlab.com/nanuchi/developing-with-docker">Link</a></h2>
+                href="https://gitlab.io/nanuchi/developing-with-docker">Link</a></h2>
         <h2>Step 6: Create dockerfile for frontend</h2>
-        <img src="https://github.com/harshit1042/ia2_cloud/blob/main/images/1.1.png" alt="">
+        <img src="https://github.io/harshit1042/ia2_cloud/blob/main/images/1.1.png" alt="">
 
         <h2>Create a file named Dockerfile in app/ directory and paste the below content in that file</h2>
-        <img src="https://github.com/harshit1042/ia2_cloud/blob/main/images/10.png" alt="">
+        <img src="https://github.io/harshit1042/ia2_cloud/blob/main/images/10.png" alt="">
 
         <h2>Open command prompt and run the below shell scripts to run the server</h2>
-        <img src="https://github.com/harshit1042/ia2_cloud/blob/main/images/11.png" alt=""><br>
-        <img src="https://github.com/harshit1042/ia2_cloud/blob/main/images/12.png" alt=""><br>
-        <img src="https://github.com/harshit1042/ia2_cloud/blob/main/images/.png" alt=""><br>
+        <img src="https://github.io/harshit1042/ia2_cloud/blob/main/images/11.png" alt=""><br>
+        <img src="https://github.io/harshit1042/ia2_cloud/blob/main/images/12.png" alt=""><br>
+        <img src="https://github.io/harshit1042/ia2_cloud/blob/main/images/.png" alt=""><br>
 
         <h2>Open the Dockerfile that you had just created and update its content with the below content</h2>
-        <img src="https://github.com/harshit1042/ia2_cloud/blob/main/images/14.png" alt="">
+        <img src="https://github.io/harshit1042/ia2_cloud/blob/main/images/14.png" alt="">
 
         <h2>Make the below changes to your server.js file</h2>
-        <img src="https://github.com/harshit1042/ia2_cloud/blob/main/images/15.png" alt="">
+        <img src="https://github.io/harshit1042/ia2_cloud/blob/main/images/15.png" alt="">
 
         <h1>Step 4: Building and Running React Frontend Container</h1>
         <p><b>Build Docker image for Frontend : </b>docker build -t mynodeapp .</p>
-        <img src="https://github.com/harshit1042/ia2_cloud/blob/main/images/16.png" alt="">
+        <img src="https://github.io/harshit1042/ia2_cloud/blob/main/images/16.png" alt="">
         <p><b>Run frontend container : </b>docker run -d -p 3000:3000 --network=my-network --name=nodejs_app mynodeapp
         </p>
-        <img src="https://github.com/harshit1042/ia2_cloud/blob/main/images/18.png" alt="">
+        <img src="https://github.io/harshit1042/ia2_cloud/blob/main/images/18.png" alt="">
 
         <h1>Step 5: Look for containers at Docker Desktop or run <i>docker ps</i></h1>
-        <img src="https://github.com/harshit1042/ia2_cloud/blob/main/images/19.png" alt="">
+        <img src="https://github.io/harshit1042/ia2_cloud/blob/main/images/19.png" alt="">
 
         <h1>Step 6: Project Frontend</h1>
         <p>Go to your localhost:3000 to see your frontend</p>
-        <img src="https://github.com/harshit1042/ia2_cloud/blob/main/images/25.png" alt="">
+        <img src="https://github.io/harshit1042/ia2_cloud/blob/main/images/25.png" alt="">
 
 
     </div>
